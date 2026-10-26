@@ -9,8 +9,8 @@ int main(){
     printf("Enter a number\n");
     scanf("%lf",&number0); //We ask the user for a number.
 
-    int n=10;
-    int integer = (int) number0;
+    long long int n=10;
+    long long int integer = (long long) number0;
 
     while(true){
         integer = integer/10; //I divide the number by 10...
@@ -21,10 +21,10 @@ int main(){
     }
 
 //I use the logic: a double can only have 17 digits. //Provided the user gives us a correct number,
-    for(i=1; i <= 17-j; j++){   //we shall commence the 'for' loop 17-j times.
+    for(i=1; i <= 17-j; i++){   //we shall commence the 'for' loop 17-j times.
         double decimal = number0; 
         decimal = decimal * n; //I multiply the number by n, which initially is 10.
-        integer = (int) decimal; //Then I convert it to an integer...
+        integer = (long long) decimal; //Then I convert it to an integer...
         if(integer % 10 != 0){ //And this way, with mod10, I can check if the digit is zero or not.
             isinteger=false; //Amongst the max 17-j digits, after the comma, if one is not 0, we have a double.
             break; //Hence we break out of the loop.
